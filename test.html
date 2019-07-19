@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>十进制转二进制</title>
+</head>
+<body>
+        <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+        <button id="trans-btn">转化为二进制</button>
+        <p id="result">获取结果</p>
+        <script>
+           document.getElementById('trans-btn').onclick = function dec2bin(decNumber) {
+        // 在这里实现你的转化方法，注意需要判断输入必须为一个非负整数
+                var decNumber = parseInt(document.getElementById('dec-number').value);
+                var jieguo = document.getElementById('result');
+                if(decNumber < 0){
+                    alert("请输入一个非负整数");
+                } 
+                else{
+                    jieguo.innerHTML = "该数的转换结果为:" + decNumber.toString(2);   /*将十进制数转换为二进制数（整数和小数都可以用这种方法）*/
+                }              
+        }        
+    // 实现党点击转化按钮时，将输入的十进制数字转化为二进制，并显示在result的p标签内
+    
+        </script>
+</body>
+</html>
